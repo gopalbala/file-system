@@ -1,2 +1,2 @@
 # file-system
-In meory file system
+In memory file system
