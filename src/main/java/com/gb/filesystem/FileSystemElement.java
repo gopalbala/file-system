@@ -23,4 +23,6 @@ public class FileSystemElement {
         this.owner = owner;
         this.size = size;
     }
+
+    public void getAll(){}
 }
