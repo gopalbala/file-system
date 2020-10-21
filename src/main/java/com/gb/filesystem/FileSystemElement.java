@@ -16,7 +16,6 @@ public class FileSystemElement {
     private String owner;
     private boolean isFile;
 
-
     public FileSystemElement(Directory parent, String name, String owner, int size) {
         this.parent = parent;
         this.name = name;
@@ -24,5 +23,9 @@ public class FileSystemElement {
         this.size = size;
     }
 
-    public void getAll(){}
+    public void getAll() {
+    }
+
+    public void accept(FileSystemVisitor fileSystemVisitor) {
+    }
 }
