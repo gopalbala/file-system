@@ -38,4 +38,25 @@ public class Directory extends FileSystemElement {
         }
         return directory;
     }
+
+    public void getAll(){
+        int count=0;
+        for(FileSystemElement FileSystemElement : getChildren()){
+            if(!FileSystemElement.isFile()){
+                System.out.print(FileSystemElement.getName()+"\t");
+            }
+            else{
+                System.out.print(FileSystemElement.getName()+" ");
+            }
+            count++;
+            if(count==getChildren().size() && !FileSystemElement.isFile()){
+                System.out.println();
+            }
+        }
+        for(FileSystemElement fs : getChildren()){
+            if(!fs.isFile()){
+                fs.getAll();
+            }
+        }
+    }
 }
