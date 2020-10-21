@@ -10,4 +10,8 @@ public class File extends FileSystemElement {
     public File(Directory parent, String name, String owner, int size) {
         super(parent, name, owner, size);
     }
+
+    public void accept(FileSystemVisitor fileSystemVisitor) {
+        fileSystemVisitor.visit(this);
+    }
 }
