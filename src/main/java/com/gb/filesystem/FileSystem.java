@@ -15,6 +15,7 @@ public class FileSystem {
     private Directory current;
     private Directory root;
     private static FileSystem fs = null;
+    private boolean isFile;
 
     private FileSystem() {
         this.directory = new Directory(null, "root", "admin", 0);
